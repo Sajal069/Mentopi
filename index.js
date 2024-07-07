@@ -61,7 +61,7 @@ app.post("/subscribe", (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.render("home.ejs", { user: req.user });
+  res.render("Home.ejs", { user: req.user });
 });
 
 app.get("/Courses", (req, res) => {
@@ -74,7 +74,7 @@ app.get("/login", (req, res) => {
 
 app.get("/myaccount", (req, res) => {
   if (req.isAuthenticated()) {
-    res.render("myaccount.ejs", { user: req.user });
+    res.render("MyAccount.ejs", { user: req.user });
   } else {
     res.redirect("/login");
   }
