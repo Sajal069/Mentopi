@@ -1,0 +1,106 @@
+<%- include('partials/Header') %>
+
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">
+      <img
+        src="assets/2-removebg-preview (1).png"
+        alt="Logo"
+        width="30"
+        height="24"
+        class="d-inline-block align-text-top"
+      />
+      Mentopi
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ms-auto">
+        <a class="nav-link" aria-current="page" href="/" role="button">Home</a>
+        <a class="nav-link" href="/courses" role="button">Courses</a>
+        <a class="nav-link" href="#">Reviews</a>
+        <a class="nav-link" href="#">About Us</a>
+        <a class="nav-link" href="#">Help</a>
+        <a class="nav-link" href="/logout">Logout</a>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="container mt-5 myAccount">
+  <div class="Purchased-courses">
+    <div class="pb-2 purchased-courses-heading">
+      <div><h2 class="poppins-bold">Courses Purchased</h2></div>
+      <div><span></span></div>
+    </div>
+    <% if (user.courses.length > 0) { %>
+    <ul>
+      <% user.courses.forEach(course => { %>
+      <li><%= course %></li>
+      <% }) %>
+    </ul>
+    <% } else { %>
+    <p>No courses bought yet.</p>
+    <% } %>
+  </div>
+</div>
+
+<div class="section9">
+  <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+    <div class="row align-items-center g-lg-5 py-5">
+      <div class="col-lg-7 text-lg-start">
+        <h5 class="display-4 fw-bold lh-1 mb-3">Mentopi</h5>
+        <p class="col-lg-10 fs-6">
+          Join The Topper's Club <br /><br /><br /><br /><span
+            >Reach out to us</span
+          ><br />contact@mentopi.com <br /><br />© 2024. All rights reserved.
+        </p>
+      </div>
+      <div class="col-md-10 mx-auto col-lg-5">
+        <form class="p-4 p-md-5 rounded-3 footer-form" id="newsletterForm">
+          <div class="form-floating mb-3">
+            <input
+              type="email"
+              class="form-control"
+              id="floatingInput"
+              placeholder="name@example.com"
+            />
+            <label for="floatingInput">Email address</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="floatingName"
+              placeholder="John Doe"
+              required
+            />
+            <label for="floatingName">Name</label>
+          </div>
+          <div class="checkbox mb-3">
+            <label>
+              <input type="checkbox" value="remember-me" /> Remember me
+            </label>
+          </div>
+          <button class="w-100 btn btn-lg btn-dark" type="submit">
+            Sign up for Our Newsletter
+          </button>
+          <hr class="my-4" />
+          <small class="terms"
+            >By clicking Sign up, you agree to the terms of use.</small
+          >
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('partials/Footer') %>

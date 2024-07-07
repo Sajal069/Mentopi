@@ -1,0 +1,904 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@100..400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body,
+html {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+/* Navigation Bar */
+
+.navbar {
+  background-color: #fdffff;
+}
+.navbar-nav {
+  margin-right: 15%;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  margin-left: 15%;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.navbar-brand img {
+  margin-right: 10%;
+}
+
+.navbar-nav .nav-link {
+  padding: 0.75%;
+}
+
+.navbar-nav a {
+  text-decoration: none;
+  font-size: 18px;
+  padding-left: 15px;
+  padding-right: 15px;
+  transition: color 0.3s;
+  position: relative;
+  font-family: "Hind Siliguri", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.navbar-nav a:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #ff9b4e;
+  transition: width 0.3s;
+  bottom: 0;
+  left: 0;
+}
+
+.navbar-nav a:hover {
+  color: #ff9b4e;
+}
+
+.navbar-nav a:hover:after {
+  width: 100%;
+}
+
+/* Main */
+
+/* Section 1 and Section 2*/
+
+.section1 {
+  background-image: url("../assets/Section1.jpeg");
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.section2 {
+  background-image: url("../assets/Section2.jpeg");
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.section1,
+.section2,
+.section4,
+.section7 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.section1::before,
+.section2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.05);
+  z-index: 1;
+  backdrop-filter: blur(4px);
+}
+
+@media only screen and (max-device-width: 1366px) {
+  .section1 {
+    background-attachment: scroll;
+  }
+  .section2 {
+    background-attachment: scroll;
+  }
+}
+
+.section1 .join,
+.rev,
+.GetStarted,
+.dream {
+  z-index: 2;
+  position: relative;
+}
+
+.join {
+  margin-top: 10vh;
+  color: white;
+  font-size: 40px;
+  font-family: "PT Serif", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.dream {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 3%;
+  font-family: "PT Serif", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.rev {
+  display: flex;
+  color: white;
+  margin-top: 2%;
+  align-items: center;
+  justify-content: center;
+}
+.review1 {
+  width: 16%;
+  padding: 2%;
+}
+
+@media (max-width: 768px) {
+  #reviews {
+    display: none;
+  }
+}
+.GetStarted .btn {
+  background-color: white;
+}
+
+.GetStarted .btn:hover {
+  background-color: #ff9b4e;
+  color: white;
+}
+
+.download-book .btn {
+  background-color: white;
+}
+
+.download-book .btn:hover {
+  background-color: #ff9b4e;
+  color: white;
+}
+
+.fa-star {
+  fill: white;
+}
+
+.secrets,
+.secrets-text,
+.download-book {
+  z-index: 2;
+  position: relative;
+}
+
+.secrets {
+  padding-top: 6%;
+  color: white;
+  font-size: 40px;
+  font-family: "PT Serif", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.secrets-text {
+  width: 50%;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 3%;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.download-book {
+  margin: 5%;
+}
+
+/* Section 3 */
+
+.card {
+  border-top-left-radius: 30%;
+}
+.card-body {
+  background-color: #ff913d;
+}
+.card-div {
+  padding-left: 15%;
+}
+
+.fa-check {
+  fill: white;
+}
+
+.card-text li {
+  color: white;
+  text-align: center;
+}
+
+.session {
+  background-color: white;
+}
+.session:hover {
+  background-color: #7d8082;
+}
+
+/* Keyframes for left-to-right translation */
+@keyframes translateLeftToRight {
+  from {
+    opacity: 0;
+    transform: translateX(-25%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Keyframes for right-to-left translation with fade-in */
+@keyframes fadeInRightToLeft {
+  from {
+    opacity: 0;
+    transform: translateX(25%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Initial styles for the elements */
+
+.section3.in-view .text-content {
+  animation: translateLeftToRight 1.5s forwards;
+}
+
+.section3.in-view .card-div {
+  animation: fadeInRightToLeft 1.5s forwards;
+}
+
+/* Section 4 */
+
+.section4 {
+  background-image: url("../assets/Section4.jpeg");
+  min-height: 50vh;
+}
+.section4::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  backdrop-filter: blur(4px);
+}
+
+.Students {
+  z-index: 2;
+  position: relative;
+}
+
+.Students-heading {
+  padding: 3.5%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Students-heading h2 {
+  color: white;
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+
+.Students-heading span {
+  display: block;
+  height: 4px;
+  width: 150px;
+  background: linear-gradient(to right, #ff913d, white);
+  margin: 0 auto;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.students-rating {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-family: "Cabin", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: 20px;
+}
+
+.students-logo1,
+.students-logo2 {
+  height: 40px;
+  width: 45px;
+  border-radius: 50%;
+  margin: 1%;
+}
+
+/* Section 5 */
+
+.section5 {
+  background-color: white;
+}
+.Mentor-heading {
+  padding: 3.5%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Mentor-heading h2 {
+  color: black;
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+
+.Mentor-heading span {
+  display: block;
+  height: 4px;
+  width: 150px;
+  background: linear-gradient(to right, #ff913d, white);
+  margin: 0 auto;
+}
+
+.Mentor-rating {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  font-family: "Cabin", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: 20px;
+}
+
+.Mentor-logo1,
+.Mentor-logo2 {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  margin: 3%;
+}
+
+.Mentor-name {
+  font-size: 18px;
+  margin: 3%;
+}
+.Mentor-rating-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Add these to your CSS file or within a <style> tag in your HTML */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Initially hidden to trigger the animation */
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+}
+.Mentor-profile-2.fade-in {
+  animation-delay: 0.5s; /* Adjust the delay as needed */
+}
+
+.Mentor-profile-3.fade-in {
+  animation-delay: 0.8s; /* Adjust the delay as needed */
+}
+
+/* Section 6 */
+.section6 {
+  border-top: #7d8082 solid 2px;
+}
+
+/* Sectin 7 */
+
+.FAQ-heading {
+  padding: 3.5%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2%;
+}
+
+.FAQ {
+  z-index: 2;
+  position: relative;
+}
+
+.FAQ-heading h2 {
+  color: black;
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+
+.FAQ-heading span {
+  display: block;
+  height: 4px;
+  width: 300px;
+  background: linear-gradient(to right, #ff913d, #ff9b4e, white);
+  margin: 0 auto;
+}
+/*
+.FAQ-rating h4 {
+  color: white;
+}
+*/
+
+.section7 {
+  background-image: url("../assets/Designer.jpeg");
+  min-height: 80vh;
+}
+.section7::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  backdrop-filter: blur(10px);
+}
+
+.Q1.fade-in {
+  animation-delay: 0.2s; /* Adjust the delay as needed */
+}
+.Q2.fade-in {
+  animation-delay: 0.2s; /* Adjust the delay as needed */
+}
+.Q3.fade-in {
+  animation-delay: 0.2s; /* Adjust the delay as needed */
+}
+.Q4.fade-in {
+  animation-delay: 0.2s; /* Adjust the delay as needed */
+}
+.Q5.fade-in {
+  animation-delay: 0.2s; /* Adjust the delay as needed */
+}
+.Q6.fade-in {
+  animation-delay: 0.2s; /* Adjust the delay as needed */
+}
+/* Section 8 */
+
+.story {
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.Portfolio {
+  margin-right: 5%;
+  margin-top: 3%;
+}
+
+.Portfolio div {
+  font-family: "Playwrite IT Moderna", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-size: 15px;
+  font-style: normal;
+}
+.happy,
+.year {
+  font-family: "Bebas Neue", sans-serif !important;
+  font-size: 45px !important;
+  font-weight: 600 !important;
+  font-style: normal;
+  color: #176be0;
+}
+
+.story-info {
+  font-family: "Playwrite IT Moderna", cursive;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-size: 15px;
+  font-style: normal;
+}
+
+/* Section 9 */
+
+.section9 {
+  background-color: #ff731c;
+}
+
+.footer-form {
+  background-color: #ff731c;
+}
+.terms {
+  color: white;
+}
+
+.section9 h5 {
+  color: white;
+  font-size: 25px;
+  border-bottom: #fdffff solid 2px;
+}
+
+.section9 p {
+  color: white;
+  font-size: 12px;
+}
+
+/* Courses */
+
+.courses1 {
+  height: 90vh;
+  width: 100%;
+  background-color: #f5f5dd;
+}
+
+.Courses-heading {
+  padding-top: 7%;
+  padding-bottom: 2%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Courses-heading h2 {
+  color: #7d8082;
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+
+.Courses-heading span {
+  display: block;
+  height: 4px;
+  width: 150px;
+  background: linear-gradient(to right, #ff913d, white);
+  margin: 0 auto;
+}
+
+.courses-section-1 {
+  width: 100%;
+  height: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2%;
+  font-family: "Mukta", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  color: #7d8082;
+}
+
+.catalouge {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  padding-left: 20%;
+  padding-right: 20%;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+}
+
+.course-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+  background-color: black;
+}
+
+.course-card-body h5 {
+  color: #f5f5dd;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.course-card-body a {
+  margin: 2%;
+}
+
+.course-card-body p {
+  color: #f5f5dd;
+}
+.course-card-btn {
+  background-color: white;
+}
+
+.course-card-btn:hover {
+  background-color: black;
+  color: #f5f5dd;
+  border: #f5f5dd solid 2px;
+}
+
+/* Login */
+
+/* General form container styling */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f5f5dd;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  height: 45%;
+  max-width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff; /* Optional: background color for the form */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-form h3 {
+  padding-bottom: 10%;
+}
+/* Styling form groups */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* Styling labels */
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Styling input fields */
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff731c;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background-color: white;
+  color: #ff731c;
+  border: #ff731c solid 2px;
+}
+
+.Login-heading {
+  padding-top: 1%;
+  padding-bottom: 10%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Login-heading h2 {
+  color: #ff731c;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.Login-heading span {
+  display: block;
+  height: 4px;
+  width: 150px;
+  background: linear-gradient(to right, #ff731c, #ff913d, white);
+  margin: 0 auto;
+}
+
+.login-form form {
+  padding-top: 5%;
+}
+
+/* Not a Member Register */
+
+.Not-a-member-Register {
+  padding-top: 6%;
+  font-style: italic;
+}
+
+.Not-a-member-Register-btn {
+  background-color: black;
+  color: white;
+}
+
+.Not-a-member-Register-btn:hover {
+  background-color: white;
+  color: black;
+  border: black solid 2px;
+}
+
+/* REGISTER */
+
+.Register-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  height: 60%;
+  max-width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff; /* Optional: background color for the form */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.Register-form h3 {
+  padding-bottom: 10%;
+}
+
+.register-btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff731c;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.register-btn:hover {
+  background-color: white;
+  color: #ff731c;
+  border: #ff731c solid 2px;
+}
+
+.register-heading {
+  padding-top: 1%;
+  padding-bottom: 10%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-heading h2 {
+  color: #ff731c;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.register-heading span {
+  display: block;
+  height: 4px;
+  width: 150px;
+  background: linear-gradient(to right, #ff731c, #ff913d, white);
+  margin: 0 auto;
+}
+
+.Register-form form {
+  padding-top: 5%;
+}
+
+/* Purchased Courses */
+
+.purchased-courses-heading {
+  padding-top: 1%;
+  padding-bottom: 10%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.purchased-courses-heading h2 {
+  color: #ff731c;
+  font-size: 35px;
+  margin-bottom: 5px;
+}
+
+.purchased-courses-heading span {
+  display: block;
+  height: 4px;
+  width: 150px;
+  background: linear-gradient(to right, black, white);
+  margin: 0 auto;
+}
+
+/* My Account */
+
+.myAccount {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.Purchased-courses {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  margin-top: 5%;
+  align-items: center;
+}

@@ -1,0 +1,195 @@
+<%- include('partials/Header') %>
+
+<div class="Courses">
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">
+        <img
+          src="assets/2-removebg-preview (1).png"
+          alt="Logo"
+          width="30"
+          height="24"
+          class="d-inline-block align-text-top"
+        />
+        Mentopi
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link" aria-current="page" href="/" role="button"
+            >Home</a
+          >
+          <a class="nav-link" href="/Courses" role="button">Courses</a>
+          <a class="nav-link" href="#">Reviews</a>
+          <a class="nav-link" href="#">About Us</a>
+          <a class="nav-link" href="#">Help</a>
+          <% if (user) { %>
+          <a class="nav-link" href="/myaccount">My Account</a>
+          <% } else { %>
+          <a class="nav-link" href="/login">Login</a>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="courses1">
+    <div class="pb-2 Courses-heading">
+      <div><h2 class="poppins-bold">Courses</h2></div>
+      <div><span></span></div>
+    </div>
+    <div class="courses-section-1">
+      Select from out Two best Selling Courses !!
+    </div>
+    <div class="catalouge">
+      <div class="card" style="width: 25rem">
+        <img
+          src="assets/JEE MAINS BOOSTER.png"
+          class="card-img-top"
+          alt="JEE MAINS BOOSTER"
+        />
+        <div class="card-body course-card-body">
+          <h5 class="card-title">JEE Mains Booster</h5>
+          <p class="card-text">Registrations open Dec 2024</p>
+          <a href="#" class="btn course-card-btn">See More</a>
+        </div>
+      </div>
+      <div class="card" style="width: 25rem">
+        <img
+          src="assets/Mentopi (8).png"
+          class="card-img-top"
+          alt="BECOME A TOPPER"
+        />
+        <div class="card-body course-card-body">
+          <h5 class="card-title">Become A Topper</h5>
+          <p class="card-text">1 on 1 Meetings for 1 Month With Best Mentors</p>
+          <a href="#" class="btn course-card-btn">See More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section5">
+    <div class="container px-4 py-5 Students" id="icon-grid">
+      <div class="pb-2 Mentor-heading fade-in-section5 hidden">
+        <div><h2 class="poppins-bold">Our Top Mentors</h2></div>
+        <div><span></span></div>
+      </div>
+      <div
+        class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 g-4 py-5"
+      >
+        <div
+          class="col flex-column align-items-center Mentor-profile Mentor-profile-1 hidden"
+        >
+          <div class="Mentor-rating-profile">
+            <div>
+              <img src="assets/am.png" alt="" class="Mentor-logo1" />
+            </div>
+            <div class="Mentor-name poppins-bold">Aryan Malhotra</div>
+          </div>
+          <div class="Mentor-rating text-center">
+            <p>IIT Kharagpur</p>
+          </div>
+        </div>
+        <div
+          class="col flex-column align-items-start Mentor-profile Mentor-profile-2 hidden"
+        >
+          <div class="Mentor-rating-profile">
+            <div>
+              <img src="assets/rb.jpeg" alt="" class="Mentor-logo2" />
+            </div>
+            <div class="Mentor-name poppins-bold">Ronit Bhati</div>
+          </div>
+          <div class="Mentor-rating text-center">
+            <p>IIT Kharagpur</p>
+          </div>
+        </div>
+        <div
+          class="col flex-column align-items-start Mentor-profile Mentor-profile-3 hidden"
+        >
+          <div class="Mentor-rating-profile">
+            <div>
+              <img src="assets/dm.jpeg" alt="" class="Mentor-logo2" />
+            </div>
+            <div class="Mentor-name poppins-bold">Devansh Mishra</div>
+          </div>
+          <div class="Mentor-rating text-center">
+            <p>IIT Kharagpur</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section2">
+    <div class="secrets fade-in-section">What Secrets Do Toppers Use?</div>
+    <div class="secrets-text fade-in-section">
+      Ever wondered how you and the toppers go to the same school, attend the
+      same coaching, and study the same material, yet they always get better
+      grades?<br />
+      We have analysed the strategies and secrets used by IITians and compressed
+      them into a 10 page Handbook.
+    </div>
+    <div class="download-book fade-in-section">
+      <button type="button" class="btn">Download The Book For Free</button>
+    </div>
+  </div>
+  <div class="section9">
+    <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+      <div class="row align-items-center g-lg-5 py-5">
+        <div class="col-lg-7 text-lg-start">
+          <h5 class="display-4 fw-bold lh-1 mb-3">Mentopi</h5>
+          <p class="col-lg-10 fs-6">
+            Join The Topper's Club <br /><br /><br /><br /><span
+              >Reach out to us</span
+            ><br />contact@mentopi.com <br /><br />© 2024. All rights reserved.
+          </p>
+        </div>
+        <div class="col-md-10 mx-auto col-lg-5">
+          <form class="p-4 p-md-5 rounded-3 footer-form" id="newsletterForm">
+            <div class="form-floating mb-3">
+              <input
+                type="email"
+                class="form-control"
+                id="floatingInput"
+                placeholder="name@example.com"
+              />
+              <label for="floatingInput">Email address</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="floatingName"
+                placeholder="John Doe"
+                required
+              />
+              <label for="floatingName">Name</label>
+            </div>
+            <div class="checkbox mb-3">
+              <label>
+                <input type="checkbox" value="remember-me" /> Remember me
+              </label>
+            </div>
+            <button class="w-100 btn btn-lg btn-dark" type="submit">
+              Sign up for Our Newsletter
+            </button>
+            <hr class="my-4" />
+            <small class="terms"
+              >By clicking Sign up, you agree to the terms of use.</small
+            >
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('partials/Footer') %>
