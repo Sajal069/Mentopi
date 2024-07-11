@@ -152,3 +152,171 @@ document
       alert("An error occurred. Please try again.");
     }
   });
+
+document
+  .getElementById("payment-form-1")
+  .addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const upiId = document.getElementById("upi-id").value;
+    const response = await fetch("/create-order/BAT-level-1", {
+      method: "POST",
+    });
+    const order = await response.json();
+
+    var options = {
+      key: "your_razorpay_key_id", // Replace with your Razorpay key id
+      amount: order.amount,
+      currency: order.currency,
+      name: "Mentopi",
+      description: "Test Transaction",
+      order_id: order.id, // This is a sample Order ID. Pass the `id` obtained in the response of createOrder.
+      handler: async function (response) {
+        const verifyResponse = await fetch("/verify-payment/BAT-level-1", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            order_id: response.razorpay_order_id,
+            payment_id: response.razorpay_payment_id,
+            signature: response.razorpay_signature,
+          }),
+        });
+        const result = await verifyResponse.json();
+        if (result.success) {
+          window.location.href = "/payment-success";
+        } else {
+          window.location.href = "/payment-failed";
+        }
+      },
+      prefill: {
+        email: "<%= user.email %>", // Pass email dynamically
+        contact: "<%= user.phone %>", // Pass contact dynamically if available
+      },
+      notes: {
+        address: "note value",
+      },
+      theme: {
+        color: "#3399cc",
+      },
+      method: {
+        upi: {
+          vpa: upiId, // User's UPI ID
+        },
+      },
+    };
+
+    var rzp1 = new Razorpay(options);
+    rzp1.open();
+  });
+
+document
+  .getElementById("payment-form-2")
+  .addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const upiId = document.getElementById("upi-id").value;
+    const response = await fetch("/create-order/BAT-level-2", {
+      method: "POST",
+    });
+    const order = await response.json();
+
+    var options = {
+      key: "your_razorpay_key_id", // Replace with your Razorpay key id
+      amount: order.amount,
+      currency: order.currency,
+      name: "Mentopi",
+      description: "Test Transaction",
+      order_id: order.id, // This is a sample Order ID. Pass the `id` obtained in the response of createOrder.
+      handler: async function (response) {
+        const verifyResponse = await fetch("/verify-payment/BAT-level-1", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            order_id: response.razorpay_order_id,
+            payment_id: response.razorpay_payment_id,
+            signature: response.razorpay_signature,
+          }),
+        });
+        const result = await verifyResponse.json();
+        if (result.success) {
+          window.location.href = "/payment-success";
+        } else {
+          window.location.href = "/payment-failed";
+        }
+      },
+      prefill: {
+        email: "<%= user.email %>", // Pass email dynamically
+        contact: "<%= user.phone %>", // Pass contact dynamically if available
+      },
+      notes: {
+        address: "note value",
+      },
+      theme: {
+        color: "#3399cc",
+      },
+      method: {
+        upi: {
+          vpa: upiId, // User's UPI ID
+        },
+      },
+    };
+
+    var rzp1 = new Razorpay(options);
+    rzp1.open();
+  });
+
+document
+  .getElementById("payment-form-3")
+  .addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const upiId = document.getElementById("upi-id").value;
+    const response = await fetch("/create-order/BAT-level-3", {
+      method: "POST",
+    });
+    const order = await response.json();
+
+    var options = {
+      key: "your_razorpay_key_id", // Replace with your Razorpay key id
+      amount: order.amount,
+      currency: order.currency,
+      name: "Mentopi",
+      description: "Test Transaction",
+      order_id: order.id, // This is a sample Order ID. Pass the `id` obtained in the response of createOrder.
+      handler: async function (response) {
+        const verifyResponse = await fetch("/verify-payment/BAT-level-1", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            order_id: response.razorpay_order_id,
+            payment_id: response.razorpay_payment_id,
+            signature: response.razorpay_signature,
+          }),
+        });
+        const result = await verifyResponse.json();
+        if (result.success) {
+          window.location.href = "/payment-success";
+        } else {
+          window.location.href = "/payment-failed";
+        }
+      },
+      prefill: {
+        email: "<%= user.email %>", // Pass email dynamically
+        contact: "<%= user.phone %>", // Pass contact dynamically if available
+      },
+      notes: {
+        address: "note value",
+      },
+      theme: {
+        color: "#3399cc",
+      },
+      method: {
+        upi: {
+          vpa: upiId, // User's UPI ID
+        },
+      },
+    };
+
+    var rzp1 = new Razorpay(options);
+    rzp1.open();
+  });

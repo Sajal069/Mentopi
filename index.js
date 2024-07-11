@@ -1,3 +1,4 @@
+// Import necessary modules
 import express from "express";
 import bodyParser from "body-parser";
 import bcrypt from "bcrypt";
@@ -6,7 +7,10 @@ import passport from "passport";
 import { Strategy as LocalStrategy } from "passport-local";
 import nodemailer from "nodemailer";
 import { users, saveUsers } from "./data/users.js";
+import Razorpay from "razorpay";
+import crypto from "crypto"; // Import crypto for signature verification
 
+// Initialize app
 const app = express();
 const port = 3000;
 const saltRounds = 10;
@@ -33,33 +37,18 @@ app.use(passport.session());
 const transporter = nodemailer.createTransport({
   service: "Gmail",
   auth: {
-    user: "sharmasajal069@gmail.com", // replace with your email
-    pass: "work25x7", // replace with your email password
+    user: "your-email@gmail.com", // replace with your email
+    pass: "your-email-password", // replace with your email password
   },
 });
 
-// Routes
-app.post("/subscribe", (req, res) => {
-  const { email, name } = req.body;
-
-  const mailOptions = {
-    from: "sharmasajal069@gmail.com", // replace with your email
-    to: "contact@mentopi.com",
-    subject: "New Newsletter Subscription",
-    text: `A new user has subscribed to the newsletter.\n\nName: ${name}\nEmail: ${email}`,
-  };
-
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-      console.error("Error sending email:", error);
-      res.status(500).send("Error subscribing to newsletter.");
-    } else {
-      console.log("Email sent:", info.response);
-      res.status(200).send("Subscription successful.");
-    }
-  });
+// Razorpay setup
+const razorpay = new Razorpay({
+  key_id: "your_razorpay_key_id", // Replace with your Razorpay key id
+  key_secret: "your_razorpay_key_secret", // Replace with your Razorpay key secret
 });
 
+// Routes
 app.get("/", (req, res) => {
   res.render("Home.ejs", { user: req.user });
 });
@@ -68,6 +57,81 @@ app.get("/Courses", (req, res) => {
   res.render("Courses.ejs", { user: req.user });
 });
 
+app.get("/Reviews", (req, res) => {
+  res.render("Reviews.ejs", { user: req.user });
+});
+
+app.get("/AboutUs", (req, res) => {
+  res.render("AboutUs.ejs", { user: req.user });
+});
+
+app.get("/Help", (req, res) => {
+  res.render("Help.ejs", { user: req.user });
+});
+
+app.get("/Become-A-Topper", (req, res) => {
+  res.render("BecomeAtopper.ejs", { user: req.user });
+});
+
+app.get("/JEE-Mains-Booster", (req, res) => {
+  res.render("JEEmainsBooster.ejs", { user: req.user });
+});
+
+app.get("/Download-Free-Book", (req, res) => {
+  res.render("HVCO.ejs", { user: req.user });
+});
+
+// Define course routes
+const courses = {
+  "BAT-level-1": { price: 699, page: "BAT-level-1-payment.ejs" },
+  "BAT-level-2": { price: 999, page: "BAT-level-2-payment.ejs" },
+  "BAT-level-3": { price: 3500, page: "BAT-level-3-payment.ejs" },
+};
+
+Object.keys(courses).forEach((courseCode) => {
+  app.get(`/${courseCode}`, (req, res) => {
+    if (req.isAuthenticated()) {
+      res.render(courses[courseCode].page, { user: req.user, courseCode });
+    } else {
+      res.redirect("/login");
+    }
+  });
+
+  app.post(`/create-order/${courseCode}`, (req, res) => {
+    const course = courses[courseCode];
+    const options = {
+      amount: course.price * 100, // amount in the smallest currency unit
+      currency: "INR",
+      receipt: `receipt_${courseCode}_${Date.now()}`,
+    };
+    razorpay.orders.create(options, (err, order) => {
+      if (err) {
+        return res.status(500).send("Error creating order");
+      }
+      res.json(order);
+    });
+  });
+
+  app.post(`/verify-payment/${courseCode}`, async (req, res) => {
+    const { order_id, payment_id, signature } = req.body;
+    const body = order_id + "|" + payment_id;
+    const expectedSignature = crypto
+      .createHmac("sha256", razorpay.key_secret)
+      .update(body.toString())
+      .digest("hex");
+    const isAuthentic = expectedSignature === signature;
+
+    if (isAuthentic) {
+      req.user.courses.push(courseCode);
+      saveUsers(users);
+      res.json({ success: true });
+    } else {
+      res.json({ success: false });
+    }
+  });
+});
+
+// Authentication routes
 app.get("/login", (req, res) => {
   res.render("login.ejs");
 });
@@ -161,6 +225,16 @@ passport.deserializeUser((email, cb) => {
   cb(null, user);
 });
 
+// Payment success and failure routes
+app.get("/payment-success", (req, res) => {
+  res.render("payment-success.ejs", { user: req.user });
+});
+
+app.get("/payment-failed", (req, res) => {
+  res.render("payment-failed.ejs", { user: req.user });
+});
+
+// Start the server
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });

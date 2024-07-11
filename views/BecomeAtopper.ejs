@@ -1,0 +1,448 @@
+<%- include('partials/Header') %>
+<div class="Become-a-topper">
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">
+        <img
+          src="assets/2-removebg-preview (1).png"
+          alt="Logo"
+          width="30"
+          height="24"
+          class="d-inline-block align-text-top"
+        />
+        Mentopi
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link" aria-current="page" href="/" role="button"
+            >Home</a
+          >
+          <a class="nav-link" href="/Courses" role="button">Courses</a>
+          <a class="nav-link" href="/Reviews">Reviews</a>
+          <a class="nav-link" href="/AboutUs">About Us</a>
+          <a class="nav-link" href="/Help">Help</a>
+          <% if (user) { %>
+          <a class="nav-link" href="/myaccount">My Account</a>
+          <% } else { %>
+          <a class="nav-link" href="/login">Login</a>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="BAT-Props">
+    <div class="px-4 py-3 my-5 text-center">
+      <img
+        class="d-block mx-auto mb-4"
+        src="assets/Mentopi__5_-removebg-preview (1).png"
+        alt=""
+        width="150"
+        height="150"
+      />
+      <h1 class="display-4 fw-bold">Become A Topper</h1>
+    </div>
+    <div class="container px-4" id="icon-grid">
+      <div
+        class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-3 props"
+      >
+        <div class="col d-flex align-items-start">
+          <div>
+            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis text-center"> 
+                <img
+                width="75em"
+                height="75em"
+                src="assets/material-symbols--reviews-outline-rounded.svg"
+                >
+                </img>
+             </h3>
+            <p>281+ reviews <br>4.9 star rating</p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <div>
+            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis text-center"><img
+                width="75em"
+                height="75em"
+                src="assets/ph--number-circle-seven-bold.svg"
+                >
+                </img></h3>
+            <p>Revolutionary 7 <br>step programme</p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <div>
+            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis text-center"><img
+                width="75em"
+                height="75em"
+                src="assets/fluent--video-chat-20-filled.svg"
+                >
+                </img></h3>
+            <p>1 on 1 video <br>chat with IITians</p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <div>
+            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis text-center"><img
+                width="75em"
+                height="75em"
+                src="assets/healthicons--money-bag.svg"
+                >
+                </img></h3>
+            <p>7 day money <br>back guarantee</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container col-xxl-8 px-4 py-5 props-hero">
+        <div class="row flex-lg-row align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+                <img src="assets/manohar-manu-hNsYIjUeXJw-unsplash.jpg.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+            </div>
+            <div class="offset-lg-2 col-lg-4">
+                <p class="lead">A revolutionary 7 step programme by JEE Toppers to fight every single one of the problems stopping you from becoming a topper.<br>
+
+                    THIS IS YOUR ONE STOP TICKET TO SUCCESS</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <button type="button" class="btn btn-outline-secondary btn-lg px-4">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="BAT-About-us">
+    <div class="px-4 pt-5 my-5 text-center border-bottom">
+      <h1 class="display-7 fw-bold">About Us</h1>
+      <div class="col-lg-8 mx-auto">
+        <p class="lead mb-4">
+          Everyone is willing to provide you with advice on what to study and
+          where to find it, but nobody tells you how to study.<br />Nobody
+          explains what the toppers do differently to become a topper.<br />
+          Have you ever wondered why? <br />The reason is that 80% of the people
+          giving advice have never been toppers themselves, and the other 20%
+          don't realize what they did differently to become a topper.<br />
+          However, we are a group of IIT toppers who have cracked the JEE
+          formula and designed a 7-step course after studying the daily routines
+          of hundreds of toppers. We went through various research papers on
+          psychology and summarized all the advice available on the internet
+          into 7 simple chapters.<br />
+          Our course comes with a bonus test series to help you check if you're
+          making tangible progress. We also offer video analysis of those tests
+          by IITians to help you correct your mistakes as you go. Additionally,
+          we sit with you on a 1-hour call twice a week to advise you on your
+          preparation and craft strategies on 1-on-1 analysis meets.<br />
+          And that's not all! When you join our program, you also become a part
+          of a 24x7 community of IITians and motivated students who are always
+          there to help you out when you're stuck.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="Select-a-package">
+    <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+        <h1 class="display-4 fw-normal text-body-emphasis">Select A Package</h1>
+        <p class="fs-5 text-body-secondary">45 Minutes free 1 on 1 stratergy session with IITian included with all levels </p>
+    </div>
+      <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm pricing-card-1">
+            <div class="card-header border-light py-3">
+              <h4 class="my-0 fw-normal">Level 1</h4>
+            </div>
+            <div class="card-body pricing-card-body-1">
+              <h1 class="card-title pricing-card-title">₹ 699/-<br><small class="fw-light">3 months subscription</small></h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>45 mins free session</li>
+                <li>20 hour 7 step programme</li>
+                <li>24x7 Chat Group premium access</li>
+                <li>7 day refund</li>
+              </ul>
+              <button type="button" class="w-100 btn btn-lg " onclick="window.location.href='/BAT-level-1'">Get Started</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm pricing-card-2">
+            <div class="card-header  py-3">
+              <h4 class="my-0 fw-normal">Level 2 </h4>
+            </div>
+            <div class="card-body pricing-card-body-2">
+              <h1 class="card-title pricing-card-title">₹ 999/-<br><small class="fw-light">3 months subscription</small></h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Weekly 2 live group Meets with IITians</li>
+                <li>Weekly Test Series-<br>JEE Advanced Special</li>
+                <li>Weekly Test Series-<br>JEE Mains Special</li>
+                <li>Weekly live special motivational Events</li>
+                <li>45 mins free session</li>
+                <li>20 hour 7 step programme</li>
+                <li>24x7 Chat Group premium access</li>
+                <li>7 day refund</li>
+              </ul>
+              <button type="button" class="w-100 btn btn-lg btn-primary" onclick="window.location.href='/BAT-level-2'">Get started</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm pricing-card-3">
+            <div class="card-header border-light py-3 ">
+              <h4 class="my-0 fw-normal">Level 3</h4>
+            </div>
+            <div class="card-body pricing-card-body-3">
+              <h1 class="card-title pricing-card-title">₹ 3500/-<br><small class="fw-light">3 months subscription</small></h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Weekly 2 - 1 on 1 live 1 hour meets</li>
+                <li>Test Analysis Video by Platinum Mentors </li>
+                <li>Weekly live Events</li>
+                <li>7 step programme</li>
+                <li>Chapter wise Exercise</li>
+                <li>24x7 Chat Group premium access</li>
+                <li>Study Material</li>
+                <li>Topper's Notes</li>
+                <li>7 day refund</li>
+              </ul>
+              <button type="button" class="w-100 btn btn-lg" onclick="window.location.href='/BAT-level-3'">Get Started</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="section5">
+    <div class="container px-4 py-5 Students" id="icon-grid">
+      <div class="pb-2 Mentor-heading fade-in-section5 hidden">
+        <div><h2 class="poppins-bold">Our Top Mentors</h2></div>
+        <div><span></span></div>
+      </div>
+      <div
+        class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 g-4 py-5"
+      >
+        <div
+          class="col flex-column align-items-center Mentor-profile Mentor-profile-1 hidden"
+        >
+          <div class="Mentor-rating-profile">
+            <div>
+              <img src="assets/am.png" alt="" class="Mentor-logo1" />
+            </div>
+            <div class="Mentor-name poppins-bold">Aryan Malhotra</div>
+          </div>
+          <div class="Mentor-rating text-center">
+            <p>IIT Kharagpur</p>
+          </div>
+        </div>
+        <div
+          class="col flex-column align-items-start Mentor-profile Mentor-profile-2 hidden"
+        >
+          <div class="Mentor-rating-profile">
+            <div>
+              <img src="assets/rb.jpeg" alt="" class="Mentor-logo2" />
+            </div>
+            <div class="Mentor-name poppins-bold">Ronit Bhati</div>
+          </div>
+          <div class="Mentor-rating text-center">
+            <p>IIT Kharagpur</p>
+          </div>
+        </div>
+        <div
+          class="col flex-column align-items-start Mentor-profile Mentor-profile-3 hidden"
+        >
+          <div class="Mentor-rating-profile">
+            <div>
+              <img src="assets/dm.jpeg" alt="" class="Mentor-logo2" />
+            </div>
+            <div class="Mentor-name poppins-bold">Devansh Mishra</div>
+          </div>
+          <div class="Mentor-rating text-center">
+            <p>IIT Kharagpur</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="Reveiws-section border-bottom">
+    <div class="pb-2 Success-Stories-heading">
+      <div><h2 class="poppins-bold">Customer Reviews</h2></div>
+      <div><span></span></div>
+    </div>
+    <div class="container my-5 reviews-1">
+      <div
+        class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg"
+      >
+        <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+          <h1 class="display-7 fw-bold lh-1">
+            Jay Patil [IIT Delhi] <br />JEE Advanced Rank : 369 <br />Course:
+            Become a topper (Level 3)
+          </h1>
+          <p class="lead">
+            Dude! the value for money is amazing. Its hard to convince my
+            parents for expensive course but their prices are soo gooood.
+          </p>
+          <div
+            class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3"
+          ></div>
+        </div>
+        <div class="col-lg-2 offset-lg-3 p-0 review-image-div">
+          <img src="assets/jay.png" alt="" class="shadow-lg" />
+        </div>
+      </div>
+    </div>
+    <div class="container my-5 reviews-2">
+      <div
+        class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg"
+      >
+        <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+          <h1 class="display-7 fw-bold lh-1">
+            Devansh Sinha [IIT Kanpur] <br />JEE Advanced Rank : 607 <br />
+            Course: Become a topper (Level 2)
+          </h1>
+          <p class="lead">
+            In 12th i used to get distracted a lot and even when I did my hard
+            work, I realised after the results that I was focussing on the wrong
+            topics. Having someone to check always if I'm going wrong was a
+            great choice.
+          </p>
+          <div
+            class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3"
+          ></div>
+        </div>
+        <div class="col-lg-2 offset-lg-3 p-0 review-image-div">
+          <img src="assets/ds.png" alt="" width="200" class="shadow-lg" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section7">
+    <div class="container px-4 py-5 FAQ" id="icon-grid">
+      <div class="pb-2 FAQ-heading fade-in-section">
+        <div>
+          <h2 class="poppins-bold">Frequently Asked Questions(FAQ'S)</h2>
+        </div>
+        <div><span></span></div>
+      </div>
+      <div
+        class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-2 g-5 py-5"
+      >
+        <div class="col d-flex align-items-start">
+          <div class="FAQ-rating Q1 mb-3">
+            <h4>What is Mentopi?</h4>
+            <p>
+              [Your Brand Name] is a [brief description of your business or
+              service]. We are passionate about [your mission statement].
+            </p>
+          </div>
+          >
+        </div>
+        <div class="col d-flex align-items-start">
+          <div class="FAQ-rating Q2 mb-3">
+            <h4>How long is the become a topper course?</h4>
+            <p>
+              We have 1 hour meetings twice a week for 3 months while the
+              REVOLUTIONARY 7 step programme is about 20 hours long divided into
+              3 months so that students do not lose their precious time and
+              consume the material in a much more effective way.
+            </p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <div class="FAQ-rating Q3 mb-3">
+            <h4>How much does it cost?</h4>
+            <p>
+              Our pricing Starts at only Rs.699 for our flagship course- "become
+              a topper". For our "JEE mains Booster" course, our prices start at
+              4100 but it is only open to registrations 1 month before 1st
+              attempt of JEE mains every year.
+            </p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <div class="FAQ-rating Q4 mb-3">
+            <h4>Do you offer a refund guarantee?</h4>
+            <p>
+              Yes we absolutely offer a 7 day refund with a no questions asked
+              policy.
+            </p>
+          </div>
+        </div>
+
+        <div class="col d-flex align-items-start">
+          <div class="FAQ-rating Q5 mb-3">
+            <h4>How can I contact you?</h4>
+            <p>
+              You can reach us by mailing us on contact@mentopi.com . We are
+              always happy to answer your questions.
+            </p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <div class="FAQ-rating Q6 mb-3">
+            <h4>Where can I learn more about you?</h4>
+            <p>
+              You can explore other sections of this website, such as the "About
+              Us" page or our blog, to learn more about our company, mission,
+              and team.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section9">
+    <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+      <div class="row align-items-center g-lg-5 py-5">
+        <div class="col-lg-7 text-lg-start">
+          <h5 class="display-4 fw-bold lh-1 mb-3">Mentopi</h5>
+          <p class="col-lg-10 fs-6">
+            Join The Topper's Club <br /><br /><br /><br /><span
+              >Reach out to us</span
+            ><br />contact@mentopi.com <br /><br />© 2024. All rights reserved.
+          </p>
+        </div>
+        <div class="col-md-10 mx-auto col-lg-5">
+          <form class="p-4 p-md-5 rounded-3 footer-form" id="newsletterForm">
+            <div class="form-floating mb-3">
+              <input
+                type="email"
+                class="form-control"
+                id="floatingInput"
+                placeholder="name@example.com"
+              />
+              <label for="floatingInput">Email address</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="floatingName"
+                placeholder="John Doe"
+                required
+              />
+              <label for="floatingName">Name</label>
+            </div>
+            <div class="checkbox mb-3">
+              <label>
+                <input type="checkbox" value="remember-me" /> Remember me
+              </label>
+            </div>
+            <button class="w-100 btn btn-lg btn-dark" type="submit">
+              Sign up for Our Newsletter
+            </button>
+            <hr class="my-4" />
+            <small class="terms"
+              >By clicking Sign up, you agree to the terms of use.</small
+            >
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include('partials/Footer') %>

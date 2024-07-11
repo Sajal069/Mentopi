@@ -8,7 +8,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@100..400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
+* {
+  font-family: "Amaranth", sans-serif;
+}
 body,
 html {
   height: 100%;
@@ -49,7 +53,7 @@ html {
   padding-right: 15px;
   transition: color 0.3s;
   position: relative;
-  font-family: "Hind Siliguri", sans-serif;
+
   font-weight: 400;
   font-style: normal;
 }
@@ -107,8 +111,7 @@ html {
 
 .section1,
 .section2,
-.section4,
-.section7 {
+.section4 {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -124,7 +127,7 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(0, 0, 0, 0.2);
   z-index: 1;
   backdrop-filter: blur(4px);
 }
@@ -150,7 +153,6 @@ html {
   margin-top: 10vh;
   color: white;
   font-size: 40px;
-  font-family: "PT Serif", serif;
   font-weight: 600;
   font-style: normal;
 }
@@ -159,7 +161,6 @@ html {
   font-size: 20px;
   text-align: center;
   margin-top: 3%;
-  font-family: "PT Serif", serif;
   font-weight: 600;
   font-style: normal;
 }
@@ -213,7 +214,6 @@ html {
   padding-top: 6%;
   color: white;
   font-size: 40px;
-  font-family: "PT Serif", serif;
   font-weight: 600;
   font-style: normal;
 }
@@ -224,7 +224,6 @@ html {
   font-size: 20px;
   text-align: center;
   margin-top: 3%;
-  font-family: "Titillium Web", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -399,7 +398,6 @@ html {
   color: black;
   display: flex;
   flex-direction: column;
-  font-family: "Cabin", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
@@ -498,19 +496,8 @@ html {
 */
 
 .section7 {
-  background-image: url("../assets/Designer.jpeg");
+  background-color: #f5f5dd;
   min-height: 80vh;
-}
-.section7::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  backdrop-filter: blur(10px);
 }
 
 .Q1.fade-in {
@@ -534,7 +521,6 @@ html {
 /* Section 8 */
 
 .story {
-  font-family: "Merriweather", serif;
   font-weight: 700;
   font-style: normal;
 }
@@ -545,7 +531,6 @@ html {
 }
 
 .Portfolio div {
-  font-family: "Playwrite IT Moderna", cursive;
   font-optical-sizing: auto;
   font-weight: 700;
   font-size: 15px;
@@ -553,7 +538,6 @@ html {
 }
 .happy,
 .year {
-  font-family: "Bebas Neue", sans-serif !important;
   font-size: 45px !important;
   font-weight: 600 !important;
   font-style: normal;
@@ -561,7 +545,6 @@ html {
 }
 
 .story-info {
-  font-family: "Playwrite IT Moderna", cursive;
   font-optical-sizing: auto;
   font-weight: 500;
   font-size: 15px;
@@ -631,7 +614,6 @@ html {
   align-items: center;
   justify-content: center;
   padding-top: 2%;
-  font-family: "Mukta", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 20px;
@@ -659,7 +641,6 @@ html {
 
 .course-card-body h5 {
   color: #f5f5dd;
-  font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-style: normal;
 }
@@ -901,4 +882,498 @@ html {
   width: 100%;
   margin-top: 5%;
   align-items: center;
+}
+
+/* Reviews */
+
+.Reveiws-section {
+  background-color: #f5f5dd;
+  padding: 4%;
+}
+
+.Success-Stories-heading {
+  padding-top: 1%;
+  padding-bottom: 10%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Success-Stories-heading h2 {
+  color: #7d8082;
+  font-size: 35px;
+  margin-bottom: 5px;
+}
+
+.Success-Stories-heading span {
+  display: block;
+  height: 4px;
+  width: 150px;
+  background: linear-gradient(to right, black, white);
+  margin: 0 auto;
+}
+
+.reviews-1,
+.reviews-2 {
+  background-color: white;
+}
+
+.review-image-div img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+/* About Us */
+
+.about-us-section {
+  padding: 4%;
+  background-color: #f5f5dd;
+}
+
+.About-Us-heading {
+  padding-top: 1%;
+  padding-bottom: 10%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.About-Us-heading h2 {
+  color: black;
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+
+.About-Us-heading span {
+  display: block;
+  height: 4px;
+  width: 150px;
+  background: linear-gradient(to right, black, white);
+  margin: 0 auto;
+}
+
+.Founder-heading {
+  padding-top: 1%;
+  padding-bottom: 10%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Founder-heading h2 {
+  color: black;
+  font-size: 35px;
+  margin-bottom: 5px;
+}
+
+.Founder-heading span {
+  display: block;
+  height: 4px;
+  width: 150px;
+  background: linear-gradient(to right, black, white);
+  margin: 0 auto;
+}
+
+/* Help */
+
+.contact-for-help {
+  padding: 4%;
+}
+
+.contact {
+  height: auto;
+  border-top: #7a7b7d solid 1px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4%;
+  padding-top: none;
+}
+
+.contact-top {
+  display: flex;
+}
+
+.name,
+.phone,
+.email {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  padding: 1.05%;
+}
+
+.contact-top {
+  width: 72%;
+  padding: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.name input,
+.phone input,
+.email input {
+  width: 100%;
+  height: 50px;
+  background-color: #f5f5dd;
+  color: black;
+  border: none;
+  outline: none;
+}
+
+.title {
+  font-size: 17px;
+  color: #7a7b7d;
+  padding-bottom: 2px;
+}
+
+.contact-bottom {
+  width: 62%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-bottom textarea {
+  display: flex;
+  width: 100%;
+  height: 250px;
+  background-color: #f5f5dd;
+  border: none;
+  outline: none;
+  padding-bottom: 5px;
+}
+
+.contact-bottom textarea:placeholder {
+  color: #cccccc;
+  font-style: italic;
+}
+
+.contact button {
+  padding: 0.5%;
+  margin-top: 20px;
+}
+
+/* BECOME A TOPPER */
+
+.BAT-Props {
+  height: auto;
+  background-image: linear-gradient(to bottom left, #0451b0, #2f96ca, #5cdee6);
+}
+
+.BAT-Props h1 {
+  color: white;
+  text-decoration: underline;
+}
+
+.props img {
+  fill: black;
+}
+
+.props p {
+  color: white;
+  font-size: 15px;
+}
+.props {
+  padding-left: 7%;
+}
+
+.props-hero img {
+  border: solid #f5f5dd 8px;
+  border-radius: 3%;
+}
+
+.props-hero p {
+  color: white;
+  font-size: 25px;
+}
+
+.props-hero .btn {
+  background-color: #ff731c;
+  color: white;
+}
+.props-hero .btn:hover {
+  background-color: black;
+}
+
+.Select-a-package {
+  padding: 4%;
+  background-color: #f5f5dd;
+}
+
+.pricing-card-1 {
+  background-color: black;
+}
+.pricing-card-1 h4 {
+  color: white;
+  font-size: 30px;
+}
+.pricing-card-body-1 {
+  background-color: black;
+  color: white;
+}
+
+.pricing-card-body-1 small {
+  color: #16eded;
+}
+.pricing-card-body-1 h1 {
+  color: #16eded;
+}
+
+.pricing-card-body-1 .btn {
+  margin-top: 25.4%;
+  background-color: #16eded;
+}
+
+.pricing-card-body-1 .btn:hover {
+  color: black;
+}
+
+.pricing-card-2 {
+  background-image: linear-gradient(to right, #ff964f, #ffd057);
+}
+.pricing-card-1 h4 {
+  color: white;
+  font-size: 30px;
+}
+.pricing-card-body-2 {
+  background-image: linear-gradient(to right, #ff964f, #ffd057);
+  color: black;
+}
+
+.pricing-card-body-2 small {
+  color: black;
+}
+.pricing-card-body-2 h1 {
+  color: black;
+}
+
+.pricing-card-body-2 .btn {
+  background-color: #16eded;
+  color: black;
+}
+
+.pricing-card-body-2 .btn:hover {
+  color: black;
+}
+
+.pricing-card-3 {
+  background-color: black;
+}
+.pricing-card-3 h4 {
+  color: white;
+  font-size: 30px;
+}
+.pricing-card-body-3 {
+  background-color: black;
+  color: white;
+}
+
+.pricing-card-body-3 small {
+  color: #16eded;
+}
+.pricing-card-body-3 h1 {
+  color: #16eded;
+}
+
+.pricing-card-body-3 .btn {
+  margin-top: 2.8%;
+  background-color: #16eded;
+}
+
+.pricing-card-body-3 .btn:hover {
+  color: black;
+}
+
+/* JEE MAINS BOOSTER */
+
+.JMB-Home {
+  min-height: 100vh;
+  background-image: url("../assets/JEE\ MAINS\ BOOSTER\ \(1\).png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  background-color: transparent;
+}
+
+.modal-body p {
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.modal-body span {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.Download-book img {
+  border: solid black 10px;
+  border-radius: 3%;
+}
+
+.Download-book p {
+  font-size: 23px;
+}
+
+.Book-form-container {
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.Book-form-container .form-input {
+  width: 100%;
+  padding: 1%;
+  border: none;
+  outline: none;
+  background-color: #f5f5dd;
+}
+
+.Book-form-container button {
+  margin-top: 3%;
+}
+
+.BAT-Home {
+  min-height: 110vh;
+  background-image: url("../assets/Mentopi\ \(8\).png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.DB-section-1 {
+  background-image: linear-gradient(to bottom right, #ffb753, #ffc956);
+}
+
+/* BAT-level-1 */
+
+.BAT-level-1-payment {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5dd;
+}
+
+.BAT-level-1-payment h1 {
+  margin: 2%;
+}
+
+.BAT-level-1-payment-cancel {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5dd;
+}
+
+.BAT-level-1-payment-cancel {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5dd;
+}
+
+.BAT-level-1-payment-Success {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5dd;
+}
+
+/* Purchased Courses */
+
+.Purchased-courses {
+  height: 80vh;
+  width: 100%;
+}
+
+.purchased-pricing-card-1 {
+  background-color: black;
+  width: auto;
+}
+.purchased-pricing-card-1 h4 {
+  color: white;
+  font-size: 30px;
+}
+.purchased-pricing-card-body-1 {
+  background-color: black;
+  color: white;
+}
+
+.purchased-pricing-card-body-1 .btn {
+  background-color: #16eded;
+}
+
+.purchased-pricing-card-body-1 .btn:hover {
+  color: black;
+}
+
+.purchased-pricing-card-2 {
+  background-image: linear-gradient(to right, #ff964f, #ffd057);
+}
+.purchased-pricing-card-1 h4 {
+  color: white;
+  font-size: 30px;
+}
+.purchased-pricing-card-body-2 {
+  background-image: linear-gradient(to right, #ff964f, #ffd057);
+  color: black;
+}
+
+.purchased-pricing-card-body-2 .btn {
+  background-color: #16eded;
+  color: black;
+}
+
+.purchased-pricing-card-body-2 .btn:hover {
+  color: black;
+}
+
+.purchased-pricing-card-3 {
+  background-color: black;
+}
+.purchased-pricing-card-3 h4 {
+  color: white;
+  font-size: 30px;
+}
+.purchased-pricing-card-body-3 {
+  background-color: black;
+  color: white;
+}
+
+.purchased-pricing-card-body-3 .btn {
+  background-color: #16eded;
+}
+
+.purchased-pricing-card-body-3 .btn:hover {
+  color: black;
 }

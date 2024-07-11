@@ -1,6 +1,5 @@
 <%- include('partials/Header') %>
-
-<div class="Courses">
+<div class="JEE-MAINS-BOOSTER">
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="/">
@@ -42,27 +41,43 @@
       </div>
     </div>
   </nav>
+  <div class="JMB-Home">
+    <div
+      class="modal modal-sheet position-static d-block p-4 py-md-5"
+      tabindex="-1"
+      role="dialog"
+      id="modalSheet"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content rounded-4 shadow">
+          <div class="modal-body text-center py-2 pt-3">
+            <p>
+              Registration Starts <br />
+              December 2024<br /><span class="border-bottom"
+                >Explore Our Other Courses !!</span
+              >
+            </p>
+          </div>
+          <div
+            class="modal-footer flex-column align-items-stretch w-100 gap-2 pb-3 border-top-0"
+          >
+            <button type="button" class="btn btn-lg btn-outline-dark">
+              Become A Topper
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="courses1">
     <div class="pb-2 Courses-heading">
       <div><h2 class="poppins-bold">Courses</h2></div>
       <div><span></span></div>
     </div>
     <div class="courses-section-1">
-      Select from out Two best Selling Courses !!
+      Explore our Flagship Course "Become-A-Topper" !!
     </div>
     <div class="catalouge">
-      <div class="card" style="width: 25rem">
-        <img
-          src="assets/JEE MAINS BOOSTER.png"
-          class="card-img-top"
-          alt="JEE MAINS BOOSTER"
-        />
-        <div class="card-body course-card-body">
-          <h5 class="card-title">JEE Mains Booster</h5>
-          <p class="card-text">Registrations open Dec 2024</p>
-          <a href="/JEE-Mains-Booster" class="btn course-card-btn">See More</a>
-        </div>
-      </div>
       <div class="card" style="width: 25rem">
         <img
           src="assets/Mentopi (8).png"
@@ -75,72 +90,6 @@
           <a href="/Become-A-Topper" class="btn course-card-btn">See More</a>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="section5">
-    <div class="container px-4 py-5 Students" id="icon-grid">
-      <div class="pb-2 Mentor-heading fade-in-section5 hidden">
-        <div><h2 class="poppins-bold">Our Top Mentors</h2></div>
-        <div><span></span></div>
-      </div>
-      <div
-        class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 g-4 py-5"
-      >
-        <div
-          class="col flex-column align-items-center Mentor-profile Mentor-profile-1 hidden"
-        >
-          <div class="Mentor-rating-profile">
-            <div>
-              <img src="assets/am.png" alt="" class="Mentor-logo1" />
-            </div>
-            <div class="Mentor-name poppins-bold">Aryan Malhotra</div>
-          </div>
-          <div class="Mentor-rating text-center">
-            <p>IIT Kharagpur</p>
-          </div>
-        </div>
-        <div
-          class="col flex-column align-items-start Mentor-profile Mentor-profile-2 hidden"
-        >
-          <div class="Mentor-rating-profile">
-            <div>
-              <img src="assets/rb.jpeg" alt="" class="Mentor-logo2" />
-            </div>
-            <div class="Mentor-name poppins-bold">Ronit Bhati</div>
-          </div>
-          <div class="Mentor-rating text-center">
-            <p>IIT Kharagpur</p>
-          </div>
-        </div>
-        <div
-          class="col flex-column align-items-start Mentor-profile Mentor-profile-3 hidden"
-        >
-          <div class="Mentor-rating-profile">
-            <div>
-              <img src="assets/dm.jpeg" alt="" class="Mentor-logo2" />
-            </div>
-            <div class="Mentor-name poppins-bold">Devansh Mishra</div>
-          </div>
-          <div class="Mentor-rating text-center">
-            <p>IIT Kharagpur</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="section2">
-    <div class="secrets fade-in-section">What Secrets Do Toppers Use?</div>
-    <div class="secrets-text fade-in-section">
-      Ever wondered how you and the toppers go to the same school, attend the
-      same coaching, and study the same material, yet they always get better
-      grades?<br />
-      We have analysed the strategies and secrets used by IITians and compressed
-      them into a 10 page Handbook.
-    </div>
-    <div class="download-book fade-in-section">
-      <a type="button" class="btn" href="/Download-Free-Book"
-        >Download The Book For Free</a
-      >
     </div>
   </div>
   <div class="section9">
@@ -193,5 +142,4 @@
     </div>
   </div>
 </div>
-
 <%- include('partials/Footer') %>

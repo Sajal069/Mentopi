@@ -1,6 +1,6 @@
 <%- include('partials/Header') %>
 
-<div class="Courses">
+<div class="Help-Page">
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="/">
@@ -42,106 +42,55 @@
       </div>
     </div>
   </nav>
-  <div class="courses1">
-    <div class="pb-2 Courses-heading">
-      <div><h2 class="poppins-bold">Courses</h2></div>
-      <div><span></span></div>
-    </div>
-    <div class="courses-section-1">
-      Select from out Two best Selling Courses !!
-    </div>
-    <div class="catalouge">
-      <div class="card" style="width: 25rem">
-        <img
-          src="assets/JEE MAINS BOOSTER.png"
-          class="card-img-top"
-          alt="JEE MAINS BOOSTER"
-        />
-        <div class="card-body course-card-body">
-          <h5 class="card-title">JEE Mains Booster</h5>
-          <p class="card-text">Registrations open Dec 2024</p>
-          <a href="/JEE-Mains-Booster" class="btn course-card-btn">See More</a>
-        </div>
-      </div>
-      <div class="card" style="width: 25rem">
-        <img
-          src="assets/Mentopi (8).png"
-          class="card-img-top"
-          alt="BECOME A TOPPER"
-        />
-        <div class="card-body course-card-body">
-          <h5 class="card-title">Become A Topper</h5>
-          <p class="card-text">1 on 1 Meetings for 1 Month With Best Mentors</p>
-          <a href="/Become-A-Topper" class="btn course-card-btn">See More</a>
-        </div>
+  <div class="contact-for-help">
+    <div class="px-4 pt-5 my-5 text-center">
+      <h1 class="display-4 fw-bold">Contact us</h1>
+      <div class="col-lg-5 mx-auto">
+        <p class="lead mb-4">
+          Feel free to contact us with any questions or concerns. You can use
+          the form on our website or email us directly on contact@mentopi.com .
+          We appreciate your interest and look forward to hearing from you.
+        </p>
       </div>
     </div>
-  </div>
-  <div class="section5">
-    <div class="container px-4 py-5 Students" id="icon-grid">
-      <div class="pb-2 Mentor-heading fade-in-section5 hidden">
-        <div><h2 class="poppins-bold">Our Top Mentors</h2></div>
-        <div><span></span></div>
-      </div>
-      <div
-        class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 g-4 py-5"
-      >
-        <div
-          class="col flex-column align-items-center Mentor-profile Mentor-profile-1 hidden"
-        >
-          <div class="Mentor-rating-profile">
+    <form action="" method="POST" class="contact">
+        <div class="contact-top">
+          <div class="name">
+            <div class="title">Name</div>
             <div>
-              <img src="assets/am.png" alt="" class="Mentor-logo1" />
+              <input type="text" placeholder="Name" name="Username" required />
             </div>
-            <div class="Mentor-name poppins-bold">Aryan Malhotra</div>
           </div>
-          <div class="Mentor-rating text-center">
-            <p>IIT Kharagpur</p>
-          </div>
-        </div>
-        <div
-          class="col flex-column align-items-start Mentor-profile Mentor-profile-2 hidden"
-        >
-          <div class="Mentor-rating-profile">
+          <div class="phone">
+            <div class="title">Phone Number</div>
             <div>
-              <img src="assets/rb.jpeg" alt="" class="Mentor-logo2" />
+              <input type="tel" placeholder="Phone" name="Phone" required />
             </div>
-            <div class="Mentor-name poppins-bold">Ronit Bhati</div>
           </div>
-          <div class="Mentor-rating text-center">
-            <p>IIT Kharagpur</p>
-          </div>
-        </div>
-        <div
-          class="col flex-column align-items-start Mentor-profile Mentor-profile-3 hidden"
-        >
-          <div class="Mentor-rating-profile">
+
+          <div class="email">
+            <div class="title">Email</div>
             <div>
-              <img src="assets/dm.jpeg" alt="" class="Mentor-logo2" />
+              <input
+                type="email"
+                placeholder="Email Address"
+                name="Email"
+                required
+              />
             </div>
-            <div class="Mentor-name poppins-bold">Devansh Mishra</div>
-          </div>
-          <div class="Mentor-rating text-center">
-            <p>IIT Kharagpur</p>
           </div>
         </div>
+        <div class="contact-bottom">
+          <div class="title">Your Message</div>
+          <textarea
+            placeholder="Your Message"
+            name="Message"
+            required
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn-outline-dark">Submit</button>
       </div>
-    </div>
-  </div>
-  <div class="section2">
-    <div class="secrets fade-in-section">What Secrets Do Toppers Use?</div>
-    <div class="secrets-text fade-in-section">
-      Ever wondered how you and the toppers go to the same school, attend the
-      same coaching, and study the same material, yet they always get better
-      grades?<br />
-      We have analysed the strategies and secrets used by IITians and compressed
-      them into a 10 page Handbook.
-    </div>
-    <div class="download-book fade-in-section">
-      <a type="button" class="btn" href="/Download-Free-Book"
-        >Download The Book For Free</a
-      >
-    </div>
+    </form>
   </div>
   <div class="section9">
     <div class="container col-xl-10 col-xxl-8 px-4 py-5">

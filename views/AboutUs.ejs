@@ -1,0 +1,190 @@
+<%- include('partials/Header') %>
+
+<div class="About-us-page">
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">
+        <img
+          src="assets/2-removebg-preview (1).png"
+          alt="Logo"
+          width="30"
+          height="24"
+          class="d-inline-block align-text-top"
+        />
+        Mentopi
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link" aria-current="page" href="/" role="button"
+            >Home</a
+          >
+          <a class="nav-link" href="/Courses" role="button">Courses</a>
+          <a class="nav-link" href="/Reviews">Reviews</a>
+          <a class="nav-link" href="/AboutUs">About Us</a>
+          <a class="nav-link" href="/Help">Help</a>
+          <% if (user) { %>
+          <a class="nav-link" href="/myaccount">My Account</a>
+          <% } else { %>
+          <a class="nav-link" href="/login">Login</a>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="about-us-section">
+    <div class="pb-2 About-Us-heading">
+      <div><h2 class="poppins-bold">About Us</h2></div>
+      <div><span></span></div>
+    </div>
+    <div class="section8">
+      <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+          <div class="col-10 col-sm-8 col-lg-6 px-2">
+            <img
+              src="assets/Mentopi__5_-removebg-preview (1).png"
+              class="d-block mx-lg-auto img-fluid"
+              alt=""
+              width="200"
+              height="200"
+              loading="lazy"
+            />
+          </div>
+          <div class="col-lg-6 px-6">
+            <h2 class="display-5 fw-bold lh-1 mb-3 story">Our Mission</h2>
+            <p class="lead story-info">
+              2 years back 2 IITians came across a statistic which showed that
+              there is always a higher probability of students who have
+              brothers/sisters studying at IIT to secure a better rank. Fueled
+              by this, they decided to research on this topic, ask other
+              students, read wayyy too many books like atomic habits, the
+              secret,etc. and devices a course which gave students an unfair
+              advantage over their competitors.<br />
+              <hr />
+              Our mission is to guide our students with the strategies and principles of the best authors of the planet and helping them apply those principles to win the iit jee exam. We actively to try to implement strategies to stop our students as soon as they think of commiting a mistake which miht cost them their rank.            </p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+              <div class="Portfolio">
+                <div class="happy number" data-target="650">0 +</div>
+                <div>Happy Clients</div>
+              </div>
+              <div class="Portfolio">
+                <div class="year number" data-target="2">0 +</div>
+                <div>Years of Experience</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  
+  </div>
+  <div class="section5">
+    <div class="container px-4 py-5 Students" id="icon-grid">
+        <div class="pb-2 Founder-heading">
+            <div><h2 class="poppins-bold">Meet Our Founders</h2></div>
+            <div><span></span></div>
+        </div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 g-4 py-5">
+          <div class="col flex-column align-items-center Mentor-profile Mentor-profile-1 hidden">
+            <div class="Mentor-rating-profile"> 
+                <div >
+                    <img src="assets/am.png" alt="" class="Mentor-logo1">
+                </div>
+                <div class="Mentor-name poppins-bold">
+                    Aryan Malhotra
+                </div>
+              </div>
+            <div class="Mentor-rating text-center">
+              <p>IIT Kharagpur<br><hr>aryanmalhotra@mentopi.com</p>
+            </div>
+          </div>
+          <div class="col flex-column align-items-start Mentor-profile Mentor-profile-2 hidden">
+              <div class="Mentor-rating-profile">
+                <div >
+                    <img src="assets/rb.jpeg" alt="" class="Mentor-logo2">
+                </div>
+                <div class="Mentor-name poppins-bold">
+                    Ronit Bhati
+                </div>
+              </div>
+              <div class="Mentor-rating text-center">
+                <p>IIT Kharagpur<br><hr>management@mentopi.com</p>
+              </div>
+          </div>
+          <div class="col flex-column align-items-start Mentor-profile Mentor-profile-3 hidden">
+            <div class="Mentor-rating-profile">
+              <div >
+                  <img src="assets/dm.jpeg" alt="" class="Mentor-logo2">
+              </div>
+              <div class="Mentor-name poppins-bold">
+                  Devansh Mishra
+              </div>
+            </div>
+            <div class="Mentor-rating text-center">
+              <p>IIT Kharagpur<br><hr>management@mentopi.com</p>
+            </div>
+        </div>
+        </div>
+      </div>
+</div>
+  <div class="section9">
+    <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+      <div class="row align-items-center g-lg-5 py-5">
+        <div class="col-lg-7 text-lg-start">
+          <h5 class="display-4 fw-bold lh-1 mb-3">Mentopi</h5>
+          <p class="col-lg-10 fs-6">
+            Join The Topper's Club <br /><br /><br /><br /><span
+              >Reach out to us</span
+            ><br />contact@mentopi.com <br /><br />© 2024. All rights reserved.
+          </p>
+        </div>
+        <div class="col-md-10 mx-auto col-lg-5">
+          <form class="p-4 p-md-5 rounded-3 footer-form" id="newsletterForm">
+            <div class="form-floating mb-3">
+              <input
+                type="email"
+                class="form-control"
+                id="floatingInput"
+                placeholder="name@example.com"
+              />
+              <label for="floatingInput">Email address</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="floatingName"
+                placeholder="John Doe"
+                required
+              />
+              <label for="floatingName">Name</label>
+            </div>
+            <div class="checkbox mb-3">
+              <label>
+                <input type="checkbox" value="remember-me" /> Remember me
+              </label>
+            </div>
+            <button class="w-100 btn btn-lg btn-dark" type="submit">
+              Sign up for Our Newsletter
+            </button>
+            <hr class="my-4" />
+            <small class="terms"
+              >By clicking Sign up, you agree to the terms of use.</small
+            >
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('partials/Footer') %>

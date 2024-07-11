@@ -1,0 +1,165 @@
+<%- include('partials/Header') %>
+<div class="JEE-MAINS-BOOSTER">
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">
+        <img
+          src="assets/2-removebg-preview (1).png"
+          alt="Logo"
+          width="30"
+          height="24"
+          class="d-inline-block align-text-top"
+        />
+        Mentopi
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link" aria-current="page" href="/" role="button"
+            >Home</a
+          >
+          <a class="nav-link" href="/Courses" role="button">Courses</a>
+          <a class="nav-link" href="/Reviews">Reviews</a>
+          <a class="nav-link" href="/AboutUs">About Us</a>
+          <a class="nav-link" href="/Help">Help</a>
+          <% if (user) { %>
+          <a class="nav-link" href="/myaccount">My Account</a>
+          <% } else { %>
+          <a class="nav-link" href="/login">Login</a>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="JMB-Home"></div>
+  <div class="Download-book">
+    <div class="container col-xxl-8 px-4 py-5">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 offset-lg-2 col-lg-4">
+          <img
+            src="assets/Section2.jpeg"
+            class="d-block mx-lg-auto img-fluid"
+            alt="Bootstrap Themes"
+            width="500"
+            height="500"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-lg-6">
+          <p class="lead">
+            Want to crack the JEE Advanced with an All-Insdia Rank under 5000 by
+            studying just 8 hours a day.Here's how to make it happen.<br />
+            GET YOUR FREE 10 PAGE HANDBOOK REVEALING TOPPER'S SECRET SUCCESS
+            FORMULAE IN PDF FORMAT:
+          </p>
+          <div
+            class="d-grid gap-2 d-md-flex justify-content-md-start Book-form-container"
+          >
+            <form>
+              <label for="name">Name:</label>
+              <input
+                type="text"
+                id="name"
+                class="form-input"
+                placeholder="Enter your name"
+              />
+
+              <label for="phone">Phone no.:</label>
+              <input
+                type="text"
+                id="phone"
+                class="form-input"
+                placeholder="Enter your phone number"
+              />
+
+              <button type="submit" class="form-button btn btn-outline-dark">
+                Download
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="DB-section-1">
+    <div class="px-4 py-5 my-5 text-center">
+      <h1 class="display-5 fw-bold text-body-emphasis">
+        Say Good-Bye to Inefficient Study forever
+      </h1>
+      <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">
+          Ever wondered why the top students in your school and coaching classes
+          always seem to ace it , despite having the same 24 hours in a day as
+          you ? Do they possess a hidden formula ? They Thought they could keep
+          it under wraps forever , but we've uncovered their secrets !<br />
+          After meticulously studying the stratergies of IITians who secured the
+          top ranks in JEE Advanced ,we've compiled their insights into a
+          concise 10-page handbook.Now, you too can elevate you game and learn
+          their secrets to become an IITian-all for free. And guess what?
+          <br />You already have what it takes !
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="BAT-Home"></div>
+  <div class="section9">
+    <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+      <div class="row align-items-center g-lg-5 py-5">
+        <div class="col-lg-7 text-lg-start">
+          <h5 class="display-4 fw-bold lh-1 mb-3">Mentopi</h5>
+          <p class="col-lg-10 fs-6">
+            Join The Topper's Club <br /><br /><br /><br /><span
+              >Reach out to us</span
+            ><br />contact@mentopi.com <br /><br />© 2024. All rights reserved.
+          </p>
+        </div>
+        <div class="col-md-10 mx-auto col-lg-5">
+          <form class="p-4 p-md-5 rounded-3 footer-form" id="newsletterForm">
+            <div class="form-floating mb-3">
+              <input
+                type="email"
+                class="form-control"
+                id="floatingInput"
+                placeholder="name@example.com"
+              />
+              <label for="floatingInput">Email address</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="floatingName"
+                placeholder="John Doe"
+                required
+              />
+              <label for="floatingName">Name</label>
+            </div>
+            <div class="checkbox mb-3">
+              <label>
+                <input type="checkbox" value="remember-me" /> Remember me
+              </label>
+            </div>
+            <button class="w-100 btn btn-lg btn-dark" type="submit">
+              Sign up for Our Newsletter
+            </button>
+            <hr class="my-4" />
+            <small class="terms"
+              >By clicking Sign up, you agree to the terms of use.</small
+            >
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include('partials/Footer') %>

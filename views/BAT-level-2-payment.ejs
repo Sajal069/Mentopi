@@ -1,5 +1,4 @@
 <%- include('partials/Header') %>
-
 <nav class="navbar navbar-expand-lg fixed-top">
   <div class="container-fluid">
     <a class="navbar-brand" href="/">
@@ -26,69 +25,29 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav ms-auto">
         <a class="nav-link" aria-current="page" href="/" role="button">Home</a>
-        <a class="nav-link" href="/courses" role="button">Courses</a>
-        <a class="nav-link" href="#">Reviews</a>
-        <a class="nav-link" href="#">About Us</a>
-        <a class="nav-link" href="#">Help</a>
-        <a class="nav-link" href="/logout">Logout</a>
+        <a class="nav-link" href="/Courses" role="button">Courses</a>
+        <a class="nav-link" href="/Reviews">Reviews</a>
+        <a class="nav-link" href="/AboutUs">About Us</a>
+        <a class="nav-link" href="/Help">Help</a>
+        <% if (user) { %>
+        <a class="nav-link" href="/myaccount">My Account</a>
+        <% } else { %>
+        <a class="nav-link" href="/login">Login</a>
+        <% } %>
       </div>
     </div>
   </div>
 </nav>
-<div class="container mt-5 myAccount">
-  <div class="Purchased-courses">
-    <div class="pb-2 mb-3 purchased-courses-heading">
-      <div><h2 class="poppins-bold">Courses Purchased</h2></div>
-      <div><span></span></div>
-    </div>
-    <% if (user.courses.length > 0) { %>
-    <div
-      class="row row-cols-1 row-cols-md-<%= user.courses.length %> text-center"
-    >
-      <% user.courses.forEach(course => { %> <% if (course === "BAT-level-1") {
-      %>
-      <div class="col mb-4">
-        <div class="card rounded-3 shadow-sm purchased-pricing-card-1">
-          <div class="card-header border-light py-3">
-            <h4 class="my-0 fw-normal">Level 1</h4>
-          </div>
-          <div class="card-body purchased-pricing-card-body-1">
-            <button type="button" class="w-100 btn btn-lg">Get Started</button>
-          </div>
-        </div>
-      </div>
-      <% } else if (course === "BAT-level-2") { %>
-      <div class="col mb-4">
-        <div class="card rounded-3 shadow-sm purchased-pricing-card-2">
-          <div class="card-header py-3">
-            <h4 class="my-0 fw-normal">Level 2</h4>
-          </div>
-          <div class="card-body purchased-pricing-card-body-2">
-            <button type="button" class="w-100 btn btn-lg btn-primary">
-              Get Started
-            </button>
-          </div>
-        </div>
-      </div>
-      <% } else if (course === "BAT-level-3") { %>
-      <div class="col mb-4">
-        <div class="card rounded-3 shadow-sm purchased-pricing-card-3">
-          <div class="card-header border-light py-3">
-            <h4 class="my-0 fw-normal">Level 3</h4>
-          </div>
-          <div class="card-body purchased-pricing-card-body-3">
-            <button type="button" class="w-100 btn btn-lg">Get Started</button>
-          </div>
-        </div>
-      </div>
-      <% } %> <% }) %>
-    </div>
-    <% } else { %>
-    <p>No courses bought yet.</p>
-    <% } %>
-  </div>
+<div class="BAT-level-1-payment">
+  <h1>Complete Your Payment</h1>
+  <form id="payment-form-2">
+    <label for="upi-id">Enter your UPI ID:</label>
+    <input type="text" id="upi-id" name="upi-id" required />
+    <button type="submit" id="checkout-button" class="btn btn-outline-dark">
+      Checkout
+    </button>
+  </form>
 </div>
-
 <div class="section9">
   <div class="container col-xl-10 col-xxl-8 px-4 py-5">
     <div class="row align-items-center g-lg-5 py-5">
